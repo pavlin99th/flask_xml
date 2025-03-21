@@ -1,0 +1,11 @@
+services:
+  flask_xml:
+    build: .
+    restart: on-failure
+    expose:
+      - "8000"
+    volumes:
+      - sqlite_storage:/app/database
+
+volumes:
+  sqlite_storage:
